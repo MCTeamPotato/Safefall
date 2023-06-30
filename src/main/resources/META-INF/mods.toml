@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="LGPL-v3"
+
+[[mods]]
+modId="safefall"
+version="${file.jarVersion}"
+displayName="Safefall"
+authors="Team Potato"
+description='''
+
+'''
