@@ -16,7 +16,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.1'
+version = '0.0.2'
 group = 'com.teampotato.safefall'
 archivesBaseName = 'safefall'
 
@@ -79,7 +79,7 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.14'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4600110")
+    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4766218")
     implementation fg.deobf("curse.maven:caelus-308989:4442066")
     implementation fg.deobf("curse.maven:playeranimator-658587:4418149")
     implementation fg.deobf("curse.maven:curios-309927:4523009")
