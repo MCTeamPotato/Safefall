@@ -13,17 +13,16 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
-apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.2'
+version = '1.20.1-0.0.1'
 group = 'com.teampotato.safefall'
 archivesBaseName = 'safefall'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'parchment', version: '2022.08.14-1.19.2'
+    mappings channel: 'parchment', version: '2023.09.03-1.20.1'
     //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         client {
@@ -77,13 +76,13 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19.2-43.2.14'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.1.44'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4766218")
-    implementation fg.deobf("curse.maven:caelus-308989:4442066")
-    implementation fg.deobf("curse.maven:playeranimator-658587:4418149")
-    implementation fg.deobf("curse.maven:curios-309927:4523009")
-    implementation fg.deobf("curse.maven:geckolib-388172:4407241")
+    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:4766253")
+    implementation fg.deobf("curse.maven:curios-309927:4766347")
+    implementation fg.deobf("curse.maven:caelus-308989:4581481")
+    implementation fg.deobf("curse.maven:playeranimator-658587:4587214")
+    implementation fg.deobf("curse.maven:geckolib-388172:4756691")
 }
 
 mixin {
@@ -103,17 +102,4 @@ jar {
     }
 }
 
-jar.finalizedBy('reobfJar') 
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
-    }
-}
+jar.finalizedBy('reobfJar')
